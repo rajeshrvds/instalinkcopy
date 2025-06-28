@@ -22,8 +22,15 @@ const ICONS = {
     // This makes the button look good and positions the parent `article` tag so the button can be placed relative to it.
     GM_addStyle(`
         article {
-            position: relative !important;
-        }
+            // Example: after creating your button element
+            button.style.position = "absolute";
+            button.style.top = "10px";     // Adjust as needed
+            button.style.right = "10px";   // Adjust as needed
+            button.style.zIndex = "9999";  // Ensure it’s on top
+
+            // Make sure the parent post container is relatively positioned:
+            postElement.style.position = "relative";
+                }
         .ig-copy-link-button {
             position: absolute;
             bottom: 12px;
